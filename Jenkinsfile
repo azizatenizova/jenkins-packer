@@ -22,11 +22,11 @@ if ( env.BRANCH_NAME == "main" ) {
 }
 
 else if ( env.BRANCH_NAME == "qa" ) {
-    region = "ue-east-2"
+    region = "us-east-2"
 }
 
 else if ( env.BRANCH_NAME == "dev" ) {
-    region = "ue-west-1"
+    region = "us-west-1"
 }
 
 podTemplate(cloud: 'kubernetes', label: 'packer', showRawYaml: false, yaml: template) {
